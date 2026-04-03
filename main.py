@@ -19,6 +19,7 @@ from pymodbus.constants import Endian
 from openpyxl import Workbook
 from openpyxl.styles import Font, Alignment, Border, Side
 import logging
+from PyQt5.QtGui import QIcon
 logging.getLogger("pymodbus").setLevel(logging.ERROR)
 
 # ==========================================
@@ -147,6 +148,7 @@ class MainWindow(QMainWindow):
         return plot_widget, curve
 
     def init_ui(self):
+        self.setWindowIcon(QIcon('star.ico'))
         self.setWindowTitle('康瑞控制测试系统 -- 万里脚轮')
         self.resize(1150, 720) 
         self.setStyleSheet("""
